@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:TestTabbedApp.ViewModels"
+    x:Class="TestTabbedApp.Views.SecondTabPage"
+    x:DataType="vm:RootTabsViewModel"
+    Title="SecondTabPage">
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Margin="15"
+        Spacing="15">
+        <Label
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Text="{Binding Counter, StringFormat='{}Current counter number is: {0}'}" />
+        <Button
+            VerticalOptions="Center"
+            FontSize="Medium"
+            TextColor="White"
+            BackgroundColor="Blue"
+            Text="Decrease Counter"
+            Command="{Binding DecreaseCounterCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

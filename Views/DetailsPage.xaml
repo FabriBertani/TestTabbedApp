@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:TestTabbedApp.ViewModels"
+    x:Class="TestTabbedApp.Views.DetailsPage"
+    x:DataType="vm:DetailsViewModel"
+    Title="DetailsPage">
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Margin="15">
+        <Button
+            VerticalOptions="Center"
+            FontSize="Medium"
+            TextColor="White"
+            BackgroundColor="Blue"
+            Text="Open Details Tabs"
+            Command="{Binding OpenTabedPageCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

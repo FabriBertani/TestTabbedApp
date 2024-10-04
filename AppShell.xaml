@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TestTabbedApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TestTabbedApp.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="TestTabbedApp">
+
+    <TabBar>
+        <ShellContent
+            Title="Login"
+            ContentTemplate="{DataTemplate local:LoginPage}"
+            Route="Login" />
+    </TabBar>
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Details"
+        ContentTemplate="{DataTemplate local:DetailsPage}"
+        Route="Details" />
+
+    <FlyoutItem
+        Route="DetailTabs"
+        Title="Detail Tabs">
+        <Tab
+            Title="First Tab">
+            <ShellContent
+                Route="FirstTab"
+                ContentTemplate="{DataTemplate local:FirstTabPage}" />
+        </Tab>
+        <Tab
+            Title="Second Tab">
+            <ShellContent
+                Route="SecondTab"
+                ContentTemplate="{DataTemplate local:SecondTabPage}" />
+        </Tab>
+        <Tab
+            Title="Third Tab">
+            <ShellContent
+                Route="ThirdTab"
+                ContentTemplate="{DataTemplate local:ThirdTabPage}" />
+        </Tab>
+    </FlyoutItem>
+
+</Shell>
